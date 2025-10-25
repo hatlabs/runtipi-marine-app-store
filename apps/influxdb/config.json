@@ -6,8 +6,8 @@
   "author": "Influx Data",
   "port": 8086,
   "categories": [
-    "data-logging",
-    "monitoring"
+    "data",
+    "utilities"
   ],
   "description": "Time series database perfect for storing and analyzing marine sensor data from Signal K and other sources. InfluxDB provides powerful time series data storage, querying, and visualization capabilities.",
   "tipi_version": 3,
@@ -17,8 +17,7 @@
   "exposable": true,
   "supported_architectures": [
     "arm64",
-    "amd64",
-    "arm"
+    "amd64"
   ],
   "dynamic_config": true,
   "form_fields": []
