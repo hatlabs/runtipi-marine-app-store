@@ -1,0 +1,10 @@
+{
+  "services": [
+    {
+      "name": "influxdb",
+      "image": "influxdb:latest",
+      "isMain": true,
+      "internalPort": "8086"
+    }
+  ]
+}
