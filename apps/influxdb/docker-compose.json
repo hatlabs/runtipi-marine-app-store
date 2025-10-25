@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "influxdb",
-      "image": "influxdb:latest",
+      "image": "influxdb:3.5.0-core",
       "isMain": true,
       "internalPort": "8086",
       "volumes": [

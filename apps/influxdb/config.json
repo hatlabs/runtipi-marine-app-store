@@ -11,7 +11,7 @@
   ],
   "description": "Time series database perfect for storing and analyzing marine sensor data from Signal K and other sources. InfluxDB provides powerful time series data storage, querying, and visualization capabilities.",
   "tipi_version": 3,
-  "version": "latest",
+  "version": "3.5.0",
   "source": "https://github.com/influxdata/influxdb",
   "website": "https://www.influxdata.com/influxdb/",
   "exposable": true,
