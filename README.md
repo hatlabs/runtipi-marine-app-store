@@ -1,31 +1,62 @@
-# Example App Store Template
+# Runtipi Marine App Store
 
-This repository serves as a template for creating your own custom app store for the Runtipi platform. Use this as a starting point to create and share your own collection of applications.
+A curated collection of marine and boating applications for the Runtipi platform, designed for the Halos operating system.
+
+## Overview
+
+This custom app store provides marine-focused applications including navigation tools, data logging, monitoring systems, and boat systems integration. All apps are optimized for Raspberry Pi hardware (ARM64) and designed to work in offline/marine environments.
 
 ## Repository Structure
 
-- **apps/**: Contains individual app directories
+- **apps/**: Individual app directories
+  - Each app folder contains:
+    - `config.json`: App metadata and configuration
+    - `docker-compose.json`: Container service definition
+    - `metadata/`: App visuals and documentation
+      - `description.md`: Detailed app description
+      - `logo.jpg`: App logo (1:1 aspect ratio)
 
-  - Each app has its own folder (e.g., `whoami/`) with the following structure:
-    - `config.json`: App configuration file
-    - `docker-compose.json`: Docker setup for the app
-    - `metadata/`: Contains app visuals and descriptions
-      - `description.md`: Markdown description of the app
-      - `logo.jpg`: App logo image
+- **__tests__/**: Validation test suite
+  - `apps.test.ts`: Automated app structure validation
 
-- **tests/**: Contains test files for the app store
+- **scripts/**: Build and validation utilities
 
-  - `apps.test.ts`: Test suite for validating apps
+## Marine App Categories
 
-## Getting Started
+- **Navigation**: Chart plotters, routing, GPS tools
+- **Monitoring**: System monitors, sensor displays
+- **Data Logging**: Time-series databases, data collection
+- **Communications**: VHF, AIS, weather routing
+- **Weather**: Forecasts, GRIB viewers
+- **Utilities**: System tools, maintenance
+- **Integration**: Signal K, NMEA tools, protocol converters
 
-This repository is intended to serve as a template for creating your own app store. Follow these steps to get started:
+## Adding Apps
 
-1. Click the "Use this template" button to create a new repository based on this template
-2. Customize the apps or add your own app folders in the `apps/` directory
-3. Test your app store by using it with Runtipi
+See [CLAUDE.md](CLAUDE.md) for detailed instructions on:
+- App configuration format
+- Adding new apps
+- Testing and validation
+- Integration with Halos
+
+## Quick Start
+
+```bash
+# Install dependencies
+bun install  # or: npm install
+
+# Run validation tests
+bun test     # or: npm test
+```
+
+## Integration with Halos
+
+This app store is pre-configured in Halos marine images. Apps are accessible through the Runtipi web interface at port 80/443.
+
+**App Store URL**: `https://github.com/hatlabs/runtipi-marine-app-store`
 
 ## Documentation
 
-For detailed instructions on creating your own app store, please refer to the official guide:
-[Create Your Own App Store Guide](https://runtipi.io/docs/guides/create-your-own-app-store)
+- **Detailed Guide**: See [CLAUDE.md](CLAUDE.md) for comprehensive documentation
+- **Runtipi Docs**: [Create Your Own App Store Guide](https://runtipi.io/docs/guides/create-your-own-app-store)
+- **Halos Project**: [halos-distro](https://github.com/hatlabs/halos-distro)
