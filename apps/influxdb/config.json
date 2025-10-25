@@ -1,0 +1,24 @@
+{
+  "name": "InfluxDB",
+  "id": "influxdb",
+  "available": true,
+  "short_desc": "Time series database for marine sensor data",
+  "author": "Influx Data",
+  "port": 8086,
+  "categories": [
+    "data",
+    "utilities"
+  ],
+  "description": "Time series database perfect for storing and analyzing marine sensor data from Signal K and other sources. InfluxDB provides powerful time series data storage, querying, and visualization capabilities.",
+  "tipi_version": 3,
+  "version": "3.5.0",
+  "source": "https://github.com/influxdata/influxdb",
+  "website": "https://www.influxdata.com/influxdb/",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "dynamic_config": true,
+  "form_fields": []
+}

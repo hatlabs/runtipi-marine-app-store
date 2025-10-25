@@ -1,0 +1,24 @@
+{
+  "name": "Signal K Server",
+  "id": "signalk",
+  "available": true,
+  "short_desc": "Marine data integration and distribution platform",
+  "author": "Signal K",
+  "port": 3000,
+  "categories": [
+    "utilities",
+    "network"
+  ],
+  "description": "Signal K is a modern and open data format for marine use. A format for the modern boat, compatible with NMEA 2000 and NMEA 0183. The Signal K Server is a full-featured server that can act as a hub for all your boat's data, providing a websocket API, data logging, a web app server, and integration with various instruments and data sources.",
+  "tipi_version": 3,
+  "version": "v24",
+  "source": "https://github.com/SignalK/signalk-server",
+  "website": "https://signalk.org/",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "dynamic_config": true,
+  "form_fields": []
+}
