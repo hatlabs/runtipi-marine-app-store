@@ -4,7 +4,29 @@
       "name": "signalk",
       "image": "cr.signalk.io/signalk/signalk-server:latest-24.x",
       "isMain": true,
-      "internalPort": "3000"
+      "internalPort": "3000",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/dot_signalk",
+          "containerPath": "/home/node/.signalk"
+        },
+        {
+          "hostPath": "/dev",
+          "containerPath": "/dev"
+        },
+        {
+          "hostPath": "/var/run/docker.sock",
+          "containerPath": "/var/run/docker.sock"
+        },
+        {
+          "hostPath": "/usr/bin/docker",
+          "containerPath": "/usr/bin/docker"
+        },
+        {
+          "hostPath": "/var/run/dbus/system_bus_socket",
+          "containerPath": "/var/run/dbus/system_bus_socket"
+        }
+      ]
     }
   ]
 }

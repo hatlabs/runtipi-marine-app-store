@@ -4,7 +4,17 @@
       "name": "influxdb",
       "image": "influxdb:latest",
       "isMain": true,
-      "internalPort": "8086"
+      "internalPort": "8086",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/etc/influxdb2"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/var/lib/influxdb2"
+        }
+      ]
     }
   ]
 }
