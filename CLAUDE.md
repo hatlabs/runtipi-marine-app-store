@@ -22,32 +22,6 @@ Custom Runtipi app store for marine and boating applications.
 - **Versioning**: Pin Docker versions (no `latest`)
 - **Categories**: `navigation`, `monitoring`, `data-logging`, `communications`, `weather`, `utilities`, `integration`
 
-## config.json (required fields)
-
-```json
-{
-  "id": "app-folder-name",
-  "name": "Display Name",
-  "port": 8080,
-  "categories": ["navigation"],
-  "supported_architectures": ["arm64", "amd64"],
-  "dynamic_config": true
-}
-```
-
-## docker-compose.json
-
-```json
-{
-  "services": [{
-    "name": "service-name",
-    "image": "registry/image:version",
-    "isMain": true,
-    "internalPort": "80"
-  }]
-}
-```
-
 ## Testing
 
 ```bash
