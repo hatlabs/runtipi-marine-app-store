@@ -6,8 +6,8 @@
   "author": "Andreas Vogel",
   "port": 3011,
   "categories": [
-    "navigation",
-    "utilities"
+    "utilities",
+    "network"
   ],
   "description": "AvNav is a free and open-source navigation software designed for sailors and boaters. It provides a full-featured chartplotter with support for various chart formats, waypoint management, routing, and integration with marine data sources like Signal K. Perfect for turning your Raspberry Pi into a dedicated navigation computer.",
   "tipi_version": 3,
