@@ -1,0 +1,31 @@
+{
+  "services": [
+    {
+      "name": "opencpn",
+      "image": "ghcr.io/hatlabs/opencpn-docker:latest",
+      "isMain": true,
+      "internalPort": "3000",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/config"
+        }
+      ],
+      "devices": [
+        {
+          "hostPath": "/dev/dri",
+          "containerPath": "/dev/dri"
+        }
+      ],
+      "extraHosts": [
+        "host.docker.internal:host-gateway"
+      ],
+      "environment": {
+        "TITLE": "OpenCPN",
+        "SELKIES_ENABLE_RESIZE": "true",
+        "DRI_NODE": "/dev/dri/renderD128"
+      },
+      "shmSize": 1073741824
+    }
+  ]
+}
