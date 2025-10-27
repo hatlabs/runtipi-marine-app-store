@@ -18,7 +18,7 @@
         "TITLE": "OpenCPN",
         "SELKIES_ENABLE_RESIZE": "true"
       },
-      "shmSize": 1073741824
+      "shmSize": "1gb"
     }
   ]
 }
