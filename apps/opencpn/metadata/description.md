@@ -13,15 +13,15 @@ OpenCPN is a free and open-source chartplotter and marine GPS navigation softwar
 - **Plugin Ecosystem**: Extend functionality with a wide range of available plugins
 - **Route Planning**: Advanced route planning with tide, current, and weather data
 - **Track Recording**: Automatically record and replay your tracks
-- **GPU Acceleration**: Hardware-accelerated rendering for smooth chart display
 - **File Management**: Easy chart upload/download through web interface
 - **Responsive Interface**: Adapts to your browser window size
+- **Optimized Performance**: Smooth rendering for typical navigation use
 
 ## Default Configuration
 
 - **Web Interface**: Port 3020 (HTTP)
 - **No Authentication**: Suitable for local networks (authentication can be added via environment variables)
-- **GPU Acceleration**: Enabled by default if compatible hardware is available
+- **Software Rendering**: Uses CPU rendering for optimal compatibility with remote desktop streaming
 - **Persistent Storage**: All configuration, charts, and user data stored in `/config` volume
 
 After installation, access OpenCPN at `http://your-device-ip:3020`.
@@ -68,12 +68,15 @@ Configure NMEA connections:
 
 ## Advanced Features
 
-### Hardware Acceleration
+### Performance
 
-GPU acceleration is enabled by default for improved chart rendering performance. Requires:
-- Intel or AMD GPU with DRI3 support
-- Proper GPU drivers on host system
-- Falls back to software rendering if unavailable
+OpenCPN uses software rendering for optimal compatibility with the web-based remote desktop. Performance is excellent for typical navigation use, including:
+- Smooth chart panning and zooming
+- Real-time position updates
+- Multiple chart layers
+- AIS target display
+
+For best performance on Raspberry Pi, consider using vector charts (S-57) over large raster charts.
 
 ### Custom Resolution
 
@@ -115,7 +118,7 @@ Charts are not included and must be obtained separately:
 
 ## Performance Tips
 
-- Enable GPU acceleration for smoother chart rendering
+- Use vector charts (S-57) for better performance on resource-constrained devices
 - Use quilted charts for large coverage areas
 - Adjust chart detail levels based on zoom
 - Pre-load chart areas before cruising
@@ -134,7 +137,7 @@ Charts are not included and must be obtained separately:
 - Charts are not included and must be uploaded separately
 - Initial chart loading may take time depending on chart size and quantity
 - The web interface uses WebRTC technology - modern browsers (Chrome, Firefox, Edge) recommended
-- For best performance on Raspberry Pi, consider using vector charts (S-57) over large raster charts
+- First launch will show a configuration wizard - complete it to start using OpenCPN
 
 ## Support
 
