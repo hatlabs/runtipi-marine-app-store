@@ -4,7 +4,7 @@
   "available": true,
   "short_desc": "Full-featured chartplotter accessible via web browser",
   "author": "OpenCPN Development Team",
-  "port": 3020,
+  "port": 3021,
   "categories": [
     "utilities",
     "network"
