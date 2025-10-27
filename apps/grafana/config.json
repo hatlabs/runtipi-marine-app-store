@@ -1,7 +1,7 @@
 {
   "$schema": "../schema.json",
   "name": "Grafana",
-  "port": 8160,
+  "port": 3001,
   "available": true,
   "exposable": true,
   "dynamic_config": true,
