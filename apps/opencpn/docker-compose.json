@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "name": "opencpn",
+      "image": "ghcr.io/hatlabs/opencpn-docker:latest",
+      "isMain": true,
+      "internalPort": "3000",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/config"
+        }
+      ],
+      "extraHosts": [
+        "host.docker.internal:host-gateway"
+      ],
+      "environment": {
+        "TITLE": "OpenCPN",
+        "SELKIES_ENABLE_RESIZE": "true"
+      },
+      "shmSize": "1gb"
+    }
+  ]
+}
