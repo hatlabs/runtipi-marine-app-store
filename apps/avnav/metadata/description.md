@@ -14,18 +14,21 @@ AvNav is a free and open-source navigation software designed specifically for re
 - **Responsive Design**: Touch-optimized interface works on phones, tablets, and computers
 - **Offline Operation**: Full functionality without internet connection once charts are loaded
 - **Extensible**: Plugin system for additional features and customizations
+- **MapProxy Plugin**: Built-in chart server for serving maps to other applications
+- **O-Charts Support**: Full support for commercial o-charts chart format
 
 ## Default Configuration
 
-- **Web Interface**: Port 3011 (HTTP)
-- **Signal K Connection**: Pre-configured to connect to Signal K on port 3000
-- **Data Storage**: Persistent storage for charts, waypoints, tracks, and configuration
+- **Web Interface**: Port 8080 (HTTP)
+- **Signal K Connection**: Can connect to Signal K on port 3000
+- **Data Storage**: Persistent storage at `/var/lib/avnav` for charts, waypoints, tracks, and configuration
+- **Network Mode**: Host networking for better device discovery and multicast support
 
-After installation, access AvNav at `http://your-device-ip:3011`.
+After installation, access AvNav at `http://your-device-ip:8080`.
 
 ## Getting Started
 
-1. **Access the Interface**: Navigate to port 3011 on your device
+1. **Access the Interface**: Navigate to port 8080 on your device
 2. **Upload Charts**: Use the web interface to upload nautical charts (supports various formats including MBTiles, gemf, xml)
 3. **Configure Data Sources**:
    - If Signal K is installed, AvNav will automatically connect
