@@ -11,7 +11,7 @@
   ],
   "description": "Time series database perfect for storing and analyzing marine sensor data from Signal K and other sources. InfluxDB provides powerful time series data storage, querying, and visualization capabilities.",
   "tipi_version": 3,
-  "version": "3.5.0",
+  "version": "2.7.11",
   "source": "https://github.com/influxdata/influxdb",
   "website": "https://www.influxdata.com/influxdb/",
   "exposable": true,
@@ -20,5 +20,44 @@
     "amd64"
   ],
   "dynamic_config": true,
-  "form_fields": []
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Admin Username",
+      "env_variable": "DOCKER_INFLUXDB_INIT_USERNAME",
+      "required": true,
+      "hint": "Initial admin user account name"
+    },
+    {
+      "type": "password",
+      "label": "Admin Password",
+      "env_variable": "DOCKER_INFLUXDB_INIT_PASSWORD",
+      "required": true,
+      "min": 8,
+      "hint": "Minimum 8 characters"
+    },
+    {
+      "type": "text",
+      "label": "Organization",
+      "env_variable": "DOCKER_INFLUXDB_INIT_ORG",
+      "required": true,
+      "hint": "Organization name for InfluxDB"
+    },
+    {
+      "type": "text",
+      "label": "Default Bucket",
+      "env_variable": "DOCKER_INFLUXDB_INIT_BUCKET",
+      "required": true,
+      "hint": "Primary bucket for time series data"
+    },
+    {
+      "type": "random",
+      "label": "Admin Token",
+      "env_variable": "DOCKER_INFLUXDB_INIT_ADMIN_TOKEN",
+      "required": true,
+      "min": 32,
+      "encoding": "hex",
+      "hint": "Auto-generated admin API token"
+    }
+  ]
 }

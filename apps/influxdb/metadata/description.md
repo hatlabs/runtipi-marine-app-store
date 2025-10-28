@@ -44,4 +44,4 @@ InfluxDB works seamlessly with Signal K to store marine sensor data:
 
 ## Note
 
-This app uses the latest version of InfluxDB. The database will automatically initialize on first run. You can configure initial setup through the web interface at port 8086.
+This app uses InfluxDB v2 for compatibility with Signal K. The database will automatically initialize on first run. You can configure initial setup through the web interface at port 8086.
