@@ -2,13 +2,18 @@
   "services": [
     {
       "name": "avnav",
-      "image": "xfreex/avnav-daily:20250901",
+      "image": "xfreex/avnav-stable:20251028",
       "isMain": true,
       "internalPort": "8080",
       "ports": [
         {
           "hostPort": "3011",
           "containerPort": "8080",
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": "8083",
+          "containerPort": "8083",
           "protocol": "tcp"
         },
         {

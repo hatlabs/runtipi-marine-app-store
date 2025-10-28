@@ -67,7 +67,7 @@ The app has access to `/dev` for serial device connectivity.
 
 ## Documentation
 
-- **Official Documentation**: https://www.wellenvogel.net/software/avnav/docs/
+- **Official Documentation**: https://www.wellenvogel.net/software/avnav/docs/onepage.html?lang=en
 - **GitHub Repository**: https://github.com/wellenvogel/avnav
 - **Chart Sources**: Various free and commercial chart sources available
 
