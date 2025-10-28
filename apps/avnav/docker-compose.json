@@ -5,7 +5,18 @@
       "image": "xfreex/avnav-daily:20250901",
       "isMain": true,
       "internalPort": "8080",
-      "networkMode": "host",
+      "ports": [
+        {
+          "hostPort": "3011",
+          "containerPort": "8080",
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": "34567",
+          "containerPort": "34567",
+          "protocol": "tcp"
+        }
+      ],
       "privileged": true,
       "user": "1000:1000",
       "volumes": [
