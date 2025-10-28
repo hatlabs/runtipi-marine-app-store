@@ -2,31 +2,26 @@
   "services": [
     {
       "name": "avnav",
-      "image": "ghcr.io/hatlabs/avnav-docker:20250822",
+      "image": "xfreex/avnav-daily:20250901",
       "isMain": true,
       "internalPort": "8080",
+      "networkMode": "host",
+      "privileged": true,
+      "user": "1000:1000",
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data",
-          "containerPath": "/data"
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/charts",
-          "containerPath": "/charts"
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/config",
-          "containerPath": "/config"
+          "containerPath": "/var/lib/avnav"
         },
         {
           "hostPath": "/dev",
           "containerPath": "/dev"
         }
       ],
-      "extraHosts": [
-        "host.docker.internal:host-gateway"
-      ],
-      "environment": {}
+      "environment": {
+        "UID": 1000,
+        "GID": 1000
+      }
     }
   ]
 }

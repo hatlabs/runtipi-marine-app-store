@@ -4,14 +4,14 @@
   "available": true,
   "short_desc": "Open-source marine navigation software for chartplotting",
   "author": "Andreas Vogel",
-  "port": 3011,
+  "port": 8080,
   "categories": [
     "utilities",
     "network"
   ],
-  "description": "AvNav is a free and open-source navigation software designed for sailors and boaters. It provides a full-featured chartplotter with support for various chart formats, waypoint management, routing, and integration with marine data sources like Signal K. Perfect for turning your Raspberry Pi into a dedicated navigation computer.",
+  "description": "AvNav is a free and open-source navigation software designed for sailors and boaters. It provides a full-featured chartplotter with support for various chart formats, waypoint management, routing, and integration with marine data sources like Signal K. Includes mapproxy plugin for chart serving and o-charts support for commercial chart formats.",
   "tipi_version": 3,
-  "version": "20250822",
+  "version": "20250901",
   "source": "https://github.com/wellenvogel/avnav",
   "website": "https://www.wellenvogel.net/software/avnav/docs/",
   "exposable": true,
