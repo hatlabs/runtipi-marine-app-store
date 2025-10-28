@@ -11,8 +11,8 @@
     "network"
   ],
   "description": "OpenCPN is a free, open-source chartplotter and navigation software designed for recreational sailors and boaters. Access the full desktop application through your web browser with no VNC client required. Features include comprehensive chart support, waypoint management, routing, AIS integration, and NMEA data connections.",
-  "tipi_version": 3,
-  "version": "latest",
+  "tipi_version": 5,
+  "version": "5.12.4",
   "source": "https://github.com/OpenCPN/OpenCPN",
   "website": "https://opencpn.org/",
   "exposable": true,
