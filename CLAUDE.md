@@ -12,7 +12,7 @@ Custom Runtipi app store for marine and boating applications.
 2. Add `config.json` (id must match folder name)
 3. Add `docker-compose.json`
 4. Add `metadata/logo.jpg` (1:1 ratio) and `metadata/description.md`
-5. Test: `bun test`
+5. Test: `./run test:workflow`
 6. Create PR (CI validates)
 
 ## Key Requirements
@@ -24,6 +24,8 @@ Custom Runtipi app store for marine and boating applications.
 
 ## Testing
 
+**IMPORTANT:** Always use the `./run` script for testing, not `bun` directly.
+
 ```bash
-bun test
+./run test:workflow
 ```
