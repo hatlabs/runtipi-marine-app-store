@@ -23,13 +23,6 @@
   "form_fields": [
     {
       "type": "text",
-      "label": "Init Mode",
-      "env_variable": "DOCKER_INFLUXDB_INIT_MODE",
-      "required": true,
-      "hint": "Set to 'setup' for initial configuration"
-    },
-    {
-      "type": "text",
       "label": "Admin Username",
       "env_variable": "DOCKER_INFLUXDB_INIT_USERNAME",
       "required": true,
