@@ -23,6 +23,15 @@
   ],
   "packageRules": [
     {
+      "description": "Create separate PRs for each app update",
+      "matchDatasources": ["docker"],
+      "groupName": "{{depName}}",
+      "commitMessageTopic": "{{depName}}",
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "description": "Disable automerge for all updates",
       "matchUpdateTypes": [
         "minor",
         "major",
@@ -33,12 +42,14 @@
       "automerge": false
     },
     {
+      "description": "Disable automerge for dev dependencies",
       "matchDepTypes": [
         "devDependencies"
       ],
       "automerge": false
     },
     {
+      "description": "Disable updates for database images (managed manually)",
       "matchPackageNames": [
         "mariadb",
         "mysql",
@@ -47,6 +58,20 @@
         "redis"
       ],
       "enabled": false
+    },
+    {
+      "description": "Pin influxdb to 2.7.x (only allow patch updates within 2.7)",
+      "matchPaths": ["apps/influxdb/**"],
+      "matchDatasources": ["docker"],
+      "allowedVersions": "~2",
+      "enabled": true
+    },
+    {
+      "description": "OpenCPN: only track clean semver tags (e.g., 5.12.4), ignore detailed PPA/build tags",
+      "matchPaths": ["apps/opencpn/**"],
+      "matchDatasources": ["docker"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+$/",
+      "enabled": true
     }
   ],
   "postUpgradeTasks": {

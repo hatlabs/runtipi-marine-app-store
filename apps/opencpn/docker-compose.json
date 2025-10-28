@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "opencpn",
-      "image": "ghcr.io/hatlabs/opencpn-docker:latest",
+      "image": "ghcr.io/hatlabs/opencpn-docker:5.12.4",
       "isMain": true,
       "internalPort": "3001",
       "volumes": [
