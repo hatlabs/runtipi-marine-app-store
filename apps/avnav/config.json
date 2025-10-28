@@ -4,7 +4,7 @@
   "available": true,
   "short_desc": "Open-source marine navigation software for chartplotting",
   "author": "Andreas Vogel",
-  "port": 8080,
+  "port": 3011,
   "categories": [
     "utilities",
     "network"
