@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "influxdb",
-      "image": "influxdb:2.7.11",
+      "image": "influxdb:2.7.12",
       "isMain": true,
       "internalPort": "8086",
       "environment": {
