@@ -35,10 +35,10 @@
           "containerPath": "/dev"
         }
       ],
-      "environment": {
-        "UID": 1000,
-        "GID": 1000
-      }
+      "environment": [
+        { "key": "UID", "value": 1000 },
+        { "key": "GID", "value": 1000 }
+      ]
     }
   ]
 }

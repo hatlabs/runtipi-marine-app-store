@@ -6,16 +6,16 @@
       "image": "influxdb:2.7.11",
       "isMain": true,
       "internalPort": "8086",
-      "environment": {
-        "DOCKER_INFLUXDB_INIT_MODE": "setup",
-        "DOCKER_INFLUXDB_INIT_USERNAME": "${DOCKER_INFLUXDB_INIT_USERNAME}",
-        "DOCKER_INFLUXDB_INIT_PASSWORD": "${DOCKER_INFLUXDB_INIT_PASSWORD}",
-        "DOCKER_INFLUXDB_INIT_ORG": "${DOCKER_INFLUXDB_INIT_ORG}",
-        "DOCKER_INFLUXDB_INIT_BUCKET": "${DOCKER_INFLUXDB_INIT_BUCKET}",
-        "DOCKER_INFLUXDB_INIT_ADMIN_TOKEN": "${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}",
-        "DOCKER_INFLUXD_QUERY_CONCURRENCY": "1",
-        "DOCKER_INFLUXD_QUERY_MEMORY_BYTES": "20971520"
-      },
+      "environment": [
+        { "key": "DOCKER_INFLUXDB_INIT_MODE", "value": "setup" },
+        { "key": "DOCKER_INFLUXDB_INIT_USERNAME", "value": "${DOCKER_INFLUXDB_INIT_USERNAME}" },
+        { "key": "DOCKER_INFLUXDB_INIT_PASSWORD", "value": "${DOCKER_INFLUXDB_INIT_PASSWORD}" },
+        { "key": "DOCKER_INFLUXDB_INIT_ORG", "value": "${DOCKER_INFLUXDB_INIT_ORG}" },
+        { "key": "DOCKER_INFLUXDB_INIT_BUCKET", "value": "${DOCKER_INFLUXDB_INIT_BUCKET}" },
+        { "key": "DOCKER_INFLUXDB_INIT_ADMIN_TOKEN", "value": "${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}" },
+        { "key": "DOCKER_INFLUXD_QUERY_CONCURRENCY", "value": "1" },
+        { "key": "DOCKER_INFLUXD_QUERY_MEMORY_BYTES", "value": "20971520" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/config",

@@ -15,10 +15,10 @@
       "extraHosts": [
         "host.docker.internal:host-gateway"
       ],
-      "environment": {
-        "TITLE": "OpenCPN",
-        "SELKIES_ENABLE_RESIZE": "true"
-      },
+      "environment": [
+        { "key": "TITLE", "value": "OpenCPN" },
+        { "key": "SELKIES_ENABLE_RESIZE", "value": "true" }
+      ],
       "shmSize": "1gb"
     }
   ]
