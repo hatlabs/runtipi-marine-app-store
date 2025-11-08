@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "signalk",
-      "image": "signalk/signalk-server:v2.17.2",
+      "image": "signalk/signalk-server:v2.18.0",
       "isMain": true,
       "internalPort": "3000",
       "volumes": [
