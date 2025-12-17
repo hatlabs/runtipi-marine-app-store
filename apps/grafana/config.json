@@ -6,8 +6,8 @@
   "exposable": true,
   "dynamic_config": true,
   "id": "grafana",
-  "tipi_version": 56,
-  "version": "12.1.1",
+  "tipi_version": 57,
+  "version": "12.3.1",
   "categories": [
     "data"
   ],
@@ -22,6 +22,6 @@
     "amd64"
   ],
   "created_at": 1691943801422,
-  "updated_at": 1761338378469,
+  "updated_at": 1765939282852,
   "min_tipi_version": "4.5.0"
 }
